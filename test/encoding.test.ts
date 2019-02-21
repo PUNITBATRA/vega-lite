@@ -138,7 +138,7 @@ describe('encoding', () => {
         type: 'nominal'
       });
     });
-    it('should produce format and formatType in legend when there is timeUnit in tooltip channel or tooltip channel', () => {
+    it('should produce format and formatType when there is timeUnit in tooltip channel or tooltip channel', () => {
       const output = extractTransformsFromEncoding(
         normalizeEncoding(
           {
@@ -152,19 +152,15 @@ describe('encoding', () => {
         defaultConfig
       );
       expect(output.encoding.tooltip).toEqual({
-        legend: {
-          format: '%b',
-          formatType: 'time'
-        },
+        format: '%b',
+        formatType: 'time',
         field: 'month_c',
         title: 'c (month)',
         type: 'nominal'
       });
       expect(output.encoding.text).toEqual({
-        legend: {
-          format: '%b',
-          formatType: 'time'
-        },
+        format: '%b',
+        formatType: 'time',
         field: 'month_c',
         title: 'c (month)',
         type: 'nominal'
